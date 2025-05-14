@@ -1,0 +1,171 @@
+site_name: Raven 引擎中文文档
+site_description: Raven视觉小说引擎官方中文文档，提供完整教程、API参考和示例代码
+site_author: Furau
+# site_url: https://raven-docs.example.com
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - header.autohide
+    - navigation.top       # 添加返回顶部按钮
+    - search.suggest       # 搜索建议
+    - search.highlight     # 搜索结果高亮
+    - content.tabs.link    # 内容选项卡链接
+    - content.code.copy    # 代码复制按钮
+  palette:
+    # 默认使用深色主题
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black    # 黑色顶部导航栏
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+    
+    # 浅色主题选项
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: black    # 浅色模式下也使用黑色导航栏
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+  
+  font:
+    text: Roboto
+    code: Fira Code
+  logo: https://img.picui.cn/free/2025/05/03/6815c7b966355.png
+  favicon: images/favicon.ico
+
+# 导航结构
+nav:
+  - 主页: index.md
+  - 起步:
+    - 快速入门: quickstart.md
+    - GUI定制化指导: gui.md
+    - Sad语言: language_basics.md
+  - 编程语言基础:
+    - 脚本标签和主控流程: labels.md
+    - 对话和旁白: dialogue.md
+    - 显示图像: images.md
+    - 游戏内菜单: menus.md
+    - Python语句: python.md
+    - 条件语句: conditionals.md
+    - 音频: audio.md
+    - 音频滤波器: audio_filters.md
+    - 影片: movie.md
+    - 语音: voice.md
+  - 文本、可视组件、变换和转场:
+    - 文本: text.md
+    - 多语言支持: translation.md
+    - 可视组件: displayables.md
+    - 变换: transforms.md
+    - 变换特性: transform_properties.md
+    - 转场: transitions.md
+    - Matrixcolor: matrixcolor.md
+    - 层叠式图像: layeredimage.md
+    - 3D舞台: 3dstage.md
+    - Live2D Cubism: live2d.md
+  - 定制化Raven:
+    - 样式: styles.md
+    - 样式特性: style_properties.md
+    - 界面和界面语言: screens.md
+    - 界面行为、值和函数: screen_actions.md
+    - 特殊界面名称: screen_special.md
+    - 界面语言优化: screen_optimization.md
+    - 配置项变量: config.md
+    - 环境设定配置: preferences.md
+    - 存储区配置项: persistent.md
+    - 定制鼠标光标: mouse.md
+    - 硬件鼠标光标: mouse_hardware.md
+    - 可视组件鼠标光标: mouse_displayable.md
+    - 使用鼠标光标: mouse_usage.md
+    - 文本着色器: text_render.md
+  - 工具:
+    - 启动器: launcher.md
+    - 开发者工具: developer_tools.md
+    - 交互式编导器: director.md
+  - 其他功能:
+    - NVL模式教程: nvl.md
+    - 气泡式台词: bubbles.md
+    - 文本输入: input.md
+    - 头像: portraits.md
+    - 画廊、音乐空间和场景回放: galleries.md
+    - 拖放组件: drag_drop.md
+    - 精灵: sprites.md
+    - 定制按键映射: keymap.md
+    - 成就: achievements.md
+    - Steamworks API: steam.md
+    - 对话历史: history.md
+    - 多角色对话: multiple_dialogue.md
+    - 启动界面和加载等待: splashscreen.md
+    - Raven游戏的生命周期: lifecycle.md
+  - Python和Raven:
+    - 等效语句: statement_equivalents.md
+    - 存档、读档和回滚: save_load.md
+    - 持久化数据: persistent_data.md
+    - 高级GUI: advanced_gui.md
+    - 界面与Python: screens_python.md
+    - 创作者定义的可视组件: cdd.md
+    - 创作者定义的语句: cds.md
+    - 定制文本标签: text_tags.md
+    - 角色回调函数: character_callbacks.md
+    - 文件读写: file_io.md
+    - Color类: color.md
+    - Matrix: matrix.md
+    - 基于模型的渲染器: model.md
+    - 其他函数和配置变量: other_functions.md
+    - _ren.py 文件: renpy_python.md
+    - fetch形式的HTTPS/HTTP请求: fetch.md
+    - 截图: screenshot.md
+  - 生成分发版、更新和其他平台:
+    - 构建发行版: build.md
+    - 安卓: android.md
+    - iOS: ios.md
+    - Web / HTML5: web.md
+    - Chrome OS/Chrome浏览器: chrome.md
+    - 树莓派: raspberry_pi.md
+    - 程序内购: iap.md
+    - HTTPS/HTTP更新器: updater.md
+    - 手机端下载大容量游戏: large_downloads.md
+    - 手势: gestures.md
+  - 终端用户文档:
+    - 安全问题: security.md
+    - 处理故障: troubleshooting.md
+    - 环境变量: environment.md
+    - 自动语音: auto_voice.md
+  - 库和开发工具文档:
+    - 项目模板: templates.md
+    - 命令行交互界面: cli.md
+  - 引擎开发者文档:
+    - 集成文本编辑器: text_editor.md
+    - 皮肤: skins.md
+    - Raven多语言支持: i18n.md
+  - 变更、许可和制作人员:
+    - 变更日志(Raven 7.x-): changelog_7.md
+    - 变更日志 (Raven 6.11 - 6.99): changelog_6.md
+    - 不兼容的变更: incompatible.md
+    - 许可证: license.md
+    - 制作人员: credits.md
+    - Raven开发赞助者: sponsors.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/custom.js
+
+# 自定义版权信息
+copyright: Copyright &copy; 2004-2025 Raven 引擎
