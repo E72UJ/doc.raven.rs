@@ -44,23 +44,24 @@ nav:
   - 主页: index.md
   - 起步:
     - 快速入门: quickstart.md
+    - 双模架构: language_basics.md
     - GUI定制化指导: gui.md
-    - Sad语言: language_basics.md
-  - 编程语言基础:
-    - 脚本标签和主控流程: labels.md
+  - 声明式系统开发:
+    - 最小系统和开发流程: run.md
     - 对话和旁白: dialogue.md
     - 显示图像: images.md
     - 游戏内菜单: menus.md
-    - Python语句: python.md
+    - 调用函数和语句: python.md
     - 条件语句: conditionals.md
+    - swf渲染: swf.md
     - 音频: audio.md
     - 音频滤波器: audio_filters.md
-    - 影片: movie.md
+    - 视频: movie.md
     - 语音: voice.md
-  - 文本、可视组件、变换和转场:
+  - 文本、可视控件、变换和转场:
     - 文本: text.md
     - 多语言支持: translation.md
-    - 可视组件: displayables.md
+    - 可视控件: displayables.md
     - 变换: transforms.md
     - 变换特性: transform_properties.md
     - 转场: transitions.md
@@ -123,13 +124,11 @@ nav:
   - 生成分发版、更新和其他平台:
     - 构建发行版: build.md
     - 安卓: android.md
-    - iOS: ios.md
+    - Mac: mac.md
     - Web / HTML5: web.md
     - Chrome OS/Chrome浏览器: chrome.md
-    - 树莓派: raspberry_pi.md
     - 程序内购: iap.md
     - HTTPS/HTTP更新器: updater.md
-    - 手机端下载大容量游戏: large_downloads.md
     - 手势: gestures.md
   - 终端用户文档:
     - 安全问题: security.md
@@ -144,8 +143,6 @@ nav:
     - 皮肤: skins.md
     - Raven多语言支持: i18n.md
   - 变更、许可和制作人员:
-    - 变更日志(Raven 7.x-): changelog_7.md
-    - 变更日志 (Raven 6.11 - 6.99): changelog_6.md
     - 不兼容的变更: incompatible.md
     - 许可证: license.md
     - 制作人员: credits.md
