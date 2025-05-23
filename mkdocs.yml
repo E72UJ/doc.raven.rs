@@ -36,8 +36,8 @@ theme:
   font:
     text: Roboto
     code: Fira Code
-  logo: https://img.picui.cn/free/2025/05/03/6815c7b966355.png
-  favicon: images/favicon.ico
+  logo: https://imgs.freeimg.cn/s/68309e7895514.png
+  favicon: https://imgs.freeimg.cn/s/68309e7895514.png
 
 # 导航结构
 nav:
