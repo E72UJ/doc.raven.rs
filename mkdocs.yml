@@ -150,7 +150,9 @@ nav:
 
 markdown_extensions:
   - admonition
-  - codehilite
+  - codehilite:
+      linenums: true
+      linenum_start: 1
   - pymdownx.superfences
   - pymdownx.highlight
   - pymdownx.inlinehilite
