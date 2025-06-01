@@ -46,6 +46,7 @@ nav:
     - 快速入门: quickstart.md
     - 双模架构: language_basics.md
     - GUI定制化指导: gui.md
+    - 一些实践案例: gui.md
   - 声明式系统开发:
     - 最小系统和开发流程: run.md
     - 对话和旁白: dialogue.md
@@ -65,7 +66,6 @@ nav:
     - 变换: transforms.md
     - 变换特性: transform_properties.md
     - 转场: transitions.md
-    - Matrixcolor: matrixcolor.md
     - 层叠式图像: layeredimage.md
     - 3D舞台: 3dstage.md
     - Live2D Cubism: live2d.md
