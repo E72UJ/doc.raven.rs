@@ -7,7 +7,7 @@ theme:
   features:
     - navigation.sections
     - navigation.expand
-    - toc.integrate
+    # - toc.integrate
     - header.autohide
     - navigation.top       # 添加返回顶部按钮
     - search.suggest       # 搜索建议
@@ -81,7 +81,6 @@ nav:
     - 存储区配置项: persistent.md
     - 定制鼠标光标: mouse.md
     - 硬件鼠标光标: mouse_hardware.md
-    - 可视组件鼠标光标: mouse_displayable.md
     - 使用鼠标光标: mouse_usage.md
     - 文本着色器: text_render.md
   - 工具:
@@ -103,7 +102,7 @@ nav:
     - 多角色对话: multiple_dialogue.md
     - 启动界面和加载等待: splashscreen.md
     - Raven游戏的生命周期: lifecycle.md
-  - Python和Raven:
+  - Sacscript和Raven:
     - 等效语句: statement_equivalents.md
     - 存档、读档和回滚: save_load.md
     - 持久化数据: persistent_data.md
@@ -114,16 +113,11 @@ nav:
     - 定制文本标签: text_tags.md
     - 角色回调函数: character_callbacks.md
     - 文件读写: file_io.md
-    - Color类: color.md
-    - Matrix: matrix.md
     - 基于模型的渲染器: model.md
     - 其他函数和配置变量: other_functions.md
-    - _ren.py 文件: renpy_python.md
-    - fetch形式的HTTPS/HTTP请求: fetch.md
     - 截图: screenshot.md
   - 生成分发版、更新和其他平台:
     - 构建发行版: build.md
-    - 安卓: android.md
     - Mac: mac.md
     - Web / HTML5: web.md
     - Chrome OS/Chrome浏览器: chrome.md
