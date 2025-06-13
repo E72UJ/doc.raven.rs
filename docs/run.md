@@ -12,3 +12,4 @@ YAML（YAML Ain't Markup Language）是一种人类可读性高、结构清晰�
 
 **Raven引擎的yaml模式全部的资产和对话逻辑均使用yaml完成。**
 
+## yaml 配置结构
