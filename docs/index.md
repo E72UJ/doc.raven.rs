@@ -36,6 +36,6 @@ Raven 是一款基于 Rust 语言开发的现代化视觉小说/文字冒险游�
 本文档图文外链使用 https://www.freeimg.cn/ 图床
 
 <img
-  src="https://imgs.freeimg.cn/s/684d4cb151301.png"
+  src="https://imgs.freeimg.cn/s/682c1c9ca0965.png"
   alt="Clock"
   width="400px">
