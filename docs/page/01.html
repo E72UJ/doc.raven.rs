@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置驱动架构图</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .architecture-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .layer {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+        .user-layer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .config-layer {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .engine-layer {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid #666;
+            margin: 10px auto;
+        }
+        .flow-text {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .title {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .detail-box {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .detail-title {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .layer {
+                padding: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">配置驱动架构 (Configuration-Driven Architecture)</div>
+        
+        <div class="architecture-diagram">
+            <div class="layer user-layer">
+                <div>👤 用户层 (User Layer)</div>
+                <div style="font-size: 14px; font-weight: normal; margin-top: 8px;">
+                    修改YAML配置文件<br>
+                    定义剧情、角色、场景等
+                </div>
+            </div>
+            
+            <div class="arrow"></div>
+            <div class="flow-text">配置读取</div>
+            
+            <div class="layer config-layer">
+                <div>📄 配置层 (Configuration Layer)</div>
+                <div style="font-size: 14px; font-weight: normal; margin-top: 8px;">
+                    YAML配置文件<br>
+                    参数化的游戏数据
+                </div>
+            </div>
+            
+            <div class="arrow"></div>
+            <div class="flow-text">数据驱动</div>
+            
+            <div class="layer engine-layer">
+                <div>⚙️ 引擎层 (Engine Layer)</div>
+                <div style="font-size: 14px; font-weight: normal; margin-top: 8px;">
+                    Rust核心程序<br>
+                    固定的游戏逻辑和渲染
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-box">
+            <div class="detail-title">架构特点：</div>
+            • <strong>代码与数据分离</strong>：核心逻辑用Rust实现，游戏内容用YAML定义<br>
+            • <strong>热更新友好</strong>：修改YAML即可改变游戏内容，无需重新编译<br>
+            • <strong>降低维护成本</strong>：策划可以直接修改配置，不需要程序员介入<br>
+            • <strong>模块化设计</strong>：配置和代码职责清晰，易于扩展
+        </div>
+
+        <div class="detail-box">
+            <div class="detail-title">工作流程：</div>
+            1. Rust引擎启动时读取YAML配置文件<br>
+            2. 根据配置初始化游戏状态和资源<br>
+            3. 运行时按配置驱动游戏逻辑<br>
+            4. 需要修改时只需更新YAML，重新加载即可
+        </div>
+    </div>
+</body>
+</html>

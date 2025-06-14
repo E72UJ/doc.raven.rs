@@ -44,7 +44,7 @@ nav:
   - 主页: index.md
   - 起步:
     - 快速入门: quickstart.md
-    - 双模架构: language_basics.md
+    - 双模架构: architecture.md
     - GUI定制化指导: gui.md
     - 一些实践案例: gui.md
   - 声明式系统开发:

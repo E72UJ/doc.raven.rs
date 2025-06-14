@@ -31,5 +31,11 @@ Raven 是一款基于 Rust 语言开发的现代化视觉小说/文字冒险游�
 * `无损动画渲染` - 引擎支持原生swf和svg渲染，助力视觉小说视觉表现。
 * `多平台兼容` - 引擎默认兼容Windows和mac
 
+## 致谢
 
+本文档图文外链使用 https://www.freeimg.cn/ 图床
 
+<img
+  src="https://imgs.freeimg.cn/s/684d4cb151301.png"
+  alt="Clock"
+  width="400px">
