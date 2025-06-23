@@ -1,7 +1,5 @@
 # 欢迎来到Raven的 参考文档
-!!! note "注意"
-    本文档正在编写过程中，很多内容会在不进行通知的情况下增删改查，请了解后继续阅读
-    详细的引擎使用请电邮 furau@qq.com
+
 <img
   src="https://imgs.freeimg.cn/s/68309e7895514.png"
   alt="Clock"
@@ -16,6 +14,9 @@ Raven 是一款基于 Rust 语言开发的现代化视觉小说/文字冒险游�
 
 本文档地址 https://doc.raven.rs
 
+!!! note "注意"
+    本文档正在编写过程中，很多内容会在不进行通知的情况下增删改查，请了解后继续阅读
+    详细的引擎使用请电邮 furau@qq.com
 
 
 ```yaml linenums="1"
