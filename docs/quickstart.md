@@ -43,4 +43,5 @@ raven-visual-novel/
 └── assets/                      # 资源文件夹
     ├── main.yaml               # 主配置文件
     ├── dialogues.yaml          # 对话和剧情数据
+    └── font/                   # 字体文件
 ```
