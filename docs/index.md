@@ -20,15 +20,15 @@ Raven 是一款基于 Rust 语言开发的现代化视觉小说/文字冒险游�
 
 
 ```yaml linenums="1"
-  - character: "黛安娜"
-    label: "one"
-    text: "你好，欢迎使用Raven Engine V0.1"
-    portrait: "protagonist"
+- character: "黛安娜"
+  label: "one"
+  text: "你好，欢迎使用Raven Engine V0.1"
+  portrait: "protagonist"
 
-  - character: "黛安娜"
-    text: "Raven是一个使用rust编写的视觉小说引擎，它拥有两个开发模式"
-    portrait: "protagonist"
-    jump: "one"
+- character: "黛安娜"
+  text: "Raven是一个使用rust编写的视觉小说引擎，它拥有两个开发模式"
+  portrait: "protagonist"
+  jump: "one"
 ```
 
 ## 引擎特性
@@ -46,4 +46,22 @@ Raven 是一款基于 Rust 语言开发的现代化视觉小说/文字冒险游�
   src="https://imgs.freeimg.cn/s/682c1c9ca0965.png"
   alt="Clock"
   width="400px">
+
+<!-- ## 贡献者 -->
+<!-- <div>
+  <a target="_blank" href="https/github.com/用户名">
+    <img 
+      title="显示名称" 
+      alt="显示名称" 
+      loading="lazy" 
+      width="60" 
+      height="60" 
+      decoding="async" 
+      data-nimg="1" 
+      class="rounded-full drop-shadow-sm" 
+      src="https://avatars.githubusercontent.com/u/30483415?v=4" 
+      style="color: transparent;"
+    />
+  </a>
+</div> -->
 
