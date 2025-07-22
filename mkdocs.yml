@@ -47,6 +47,7 @@ nav:
     - 双模架构: architecture.md
     - GUI定制化指导: gui.md
     - 一些实践案例: examples.md
+    - 贡献者: credits.md
   - 🌞声明式系统开发（剧情模式）:
     - 最小系统和开发流程: run.md
     - 对话和旁白: dialogue.md
@@ -134,10 +135,9 @@ nav:
     - 集成文本编辑器: text_editor.md
     - 皮肤: skins.md
     - Raven多语言支持: i18n.md
-  - 变更、许可和制作人员:
+  - 变更、许可和赞助:
     - 不兼容的变更: incompatible.md
     - 许可证: license.md
-    - 制作人员: credits.md
     - Raven开发赞助者: sponsors.md
 
 markdown_extensions:
