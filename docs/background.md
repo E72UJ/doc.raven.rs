@@ -17,3 +17,12 @@
   background: "bg2"
 ```
 Raven 在切换背景的时候，默认给程序添加了渐变效果。
+
+## 背景系统
+调用代码为**background**:
+```yaml
+- character: "Raven"
+  text: "我是场景2"
+  portrait: "none"
+  background: "bg2"
+```
