@@ -16,7 +16,7 @@
   portrait: "none"
   background: "bg2"
 ```
-Raven 在切换背景的时候，默认给程序添加了渐变效果。
+**Raven 在切换背景的时候，默认给程序添加了渐变效果。**
 
 ## 背景系统
 调用代码为**background**:
@@ -26,3 +26,4 @@ Raven 在切换背景的时候，默认给程序添加了渐变效果。
   portrait: "none"
   background: "bg2"
 ```
+**背景所对应的资产管理文件在main.yaml**
