@@ -1,9 +1,9 @@
 ## 贡献者
 <div>
-  <a target="_blank" href="https/github.com/用户名">
+  <a target="_blank" href="https/github.com/e72uj">
     <img 
-      title="显示名称" 
-      alt="显示名称" 
+      title="furau" 
+      alt="furau" 
       loading="lazy" 
       width="60" 
       height="60" 
