@@ -143,6 +143,7 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - codehilite:
       linenums: true
       linenum_start: 1
@@ -161,3 +162,4 @@ extra_javascript:
 
 # 自定义版权信息
 copyright: Copyright &copy; 2004-2025 Raven 引擎
+
