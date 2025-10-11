@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index of openjdk-local</title>
+    <title>Raven 测试使用美术资产</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,6 +40,7 @@
         a {
             text-decoration: none;
             color: #0066cc;
+            cursor: pointer;
         }
         a:hover {
             text-decoration: underline;
@@ -52,9 +53,30 @@
             font-size: small;
             color: #666;
         }
+        .download-status {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .download-status.error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
     </style>
 </head>
 <body>
+    <!-- 下载状态提示 -->
+    <div id="download-status" class="download-status">
+        <span id="download-message">正在下载...</span>
+    </div>
+
     <!-- 语言切换按钮 -->
     <div class="language-switch">
         <button id="btn-zh" class="active" onclick="switchLanguage('zh')">中文</button>
@@ -72,57 +94,13 @@
     
     <!-- 文件列表 -->
     <pre>
-<a href="10/" onclick="handleLinkUrl(this)">10/</a>          22-Aug-2021 15:18 -
-<a href="10.0.1/" onclick="handleLinkUrl(this)">10.0.1/</a>      22-Aug-2021 15:18 -
-<a href="10.0.2/" onclick="handleLinkUrl(this)">10.0.2/</a>      22-Aug-2021 15:18 -
-<a href="11.0.1/" onclick="handleLinkUrl(this)">11.0.1/</a>      22-Aug-2021 15:19 -
-<a href="11.0.2/" onclick="handleLinkUrl(this)">11.0.2/</a>      22-Aug-2021 15:19 -
-<a href="12/" onclick="handleLinkUrl(this)">12/</a>          22-Aug-2021 15:19 -
-<a href="12.0.1/" onclick="handleLinkUrl(this)">12.0.1/</a>      22-Aug-2021 15:19 -
-<a href="12.0.2/" onclick="handleLinkUrl(this)">12.0.2/</a>      22-Aug-2021 15:19 -
-<a href="13/" onclick="handleLinkUrl(this)">13/</a>          22-Aug-2021 15:19 -
-<a href="13.0.1/" onclick="handleLinkUrl(this)">13.0.1/</a>      22-Aug-2021 15:20 -
-<a href="13.0.2/" onclick="handleLinkUrl(this)">13.0.2/</a>      22-Aug-2021 15:20 -
-<a href="14/" onclick="handleLinkUrl(this)">14/</a>          22-Aug-2021 15:20 -
-<a href="14.0.1/" onclick="handleLinkUrl(this)">14.0.1/</a>      22-Aug-2021 15:20 -
-<a href="14.0.2/" onclick="handleLinkUrl(this)">14.0.2/</a>      22-Aug-2021 15:20 -
-<a href="15/" onclick="handleLinkUrl(this)">15/</a>          22-Aug-2021 15:21 -
-<a href="15.0.1/" onclick="handleLinkUrl(this)">15.0.1/</a>      22-Aug-2021 15:21 -
-<a href="15.0.2/" onclick="handleLinkUrl(this)">15.0.2/</a>      22-Aug-2021 15:21 -
-<a href="16/" onclick="handleLinkUrl(this)">16/</a>          22-Aug-2021 15:21 -
-<a href="16.0.1/" onclick="handleLinkUrl(this)">16.0.1/</a>      22-Aug-2021 15:21 -
-<a href="16.0.2/" onclick="handleLinkUrl(this)">16.0.2/</a>      22-Aug-2021 15:22 -
-<a href="17/" onclick="handleLinkUrl(this)">17/</a>          15-Sep-2021 03:36 -
-<a href="17.0.1/" onclick="handleLinkUrl(this)">17.0.1/</a>      20-Oct-2021 03:38 -
-<a href="17.0.2/" onclick="handleLinkUrl(this)">17.0.2/</a>      19-Jan-2022 03:39 -
-<a href="18/" onclick="handleLinkUrl(this)">18/</a>          23-Mar-2022 03:36 -
-<a href="18.0.1/" onclick="handleLinkUrl(this)">18.0.1/</a>      21-Apr-2022 03:36 -
-<a href="18.0.1.1/" onclick="handleLinkUrl(this)">18.0.1.1/</a>    03-May-2022 03:40 -
-<a href="18.0.2/" onclick="handleLinkUrl(this)">18.0.2/</a>      20-Jul-2022 03:37 -
-<a href="18.0.2.1/" onclick="handleLinkUrl(this)">18.0.2.1/</a>    20-Aug-2022 03:42 -
-<a href="19/" onclick="handleLinkUrl(this)">19/</a>          21-Sep-2022 03:36 -
-<a href="19.0.1/" onclick="handleLinkUrl(this)">19.0.1/</a>      19-Oct-2022 03:37 -
-<a href="19.0.2/" onclick="handleLinkUrl(this)">19.0.2/</a>      20-Dec-2022 12:17 -
-<a href="20/" onclick="handleLinkUrl(this)">20/</a>          14-Feb-2023 00:53 -
-<a href="20.0.1/" onclick="handleLinkUrl(this)">20.0.1/</a>      30-Mar-2023 16:43 -
-<a href="20.0.2/" onclick="handleLinkUrl(this)">20.0.2/</a>      26-Jun-2023 15:00 -
-<a href="21/" onclick="handleLinkUrl(this)">21/</a>          12-Aug-2023 00:39 -
-<a href="21.0.1/" onclick="handleLinkUrl(this)">21.0.1/</a>      06-Oct-2023 16:18 -
-<a href="21.0.2/" onclick="handleLinkUrl(this)">21.0.2/</a>      06-Jan-2024 15:26 -
-<a href="22/" onclick="handleLinkUrl(this)">22/</a>          17-Feb-2024 00:20 -
-<a href="22.0.1/" onclick="handleLinkUrl(this)">22.0.1/</a>      26-Mar-2024 13:00 -
-<a href="22.0.2/" onclick="handleLinkUrl(this)">22.0.2/</a>      20-Jun-2024 17:06 -
-<a href="23/" onclick="handleLinkUrl(this)">23/</a>          22-Aug-2024 00:10 -
-<a href="23.0.1/" onclick="handleLinkUrl(this)">23.0.1/</a>      01-Oct-2024 17:08 -
-<a href="23.0.2/" onclick="handleLinkUrl(this)">23.0.2/</a>      18-Dec-2024 01:00 -
-<a href="24/" onclick="handleLinkUrl(this)">24/</a>          07-Feb-2025 02:46 -
-<a href="24.0.1/" onclick="handleLinkUrl(this)">24.0.1/</a>      17-Mar-2025 17:54 -
-<a href="24.0.2/" onclick="handleLinkUrl(this)">24.0.2/</a>      09-Jul-2025 15:43 -
-<a href="25/" onclick="handleLinkUrl(this)">25/</a>          15-Aug-2025 02:39 -
-<a href="9/" onclick="handleLinkUrl(this)">9/</a>           22-Aug-2021 15:22 -
-<a href="9.0.1/" onclick="handleLinkUrl(this)">9.0.1/</a>       21-May-2022 03:39 -
-<a href="9.0.4/" onclick="handleLinkUrl(this)">9.0.4/</a>       22-Aug-2021 15:22 -
-<a href="java-jse-ri/" onclick="handleLinkUrl(this)">java-jse-ri/</a> 22-Aug-2021 15:22 -
+<a href="https://d.feiliupan.com/t/125759649663160320/Ravenimg/1.png" onclick="handleLinkUrl(this); return false;">悲伤酒馆3840*2160</a>          22-Aug-2021 15:18 -
+
+
+
+<a href="https://d.feiliupan.com/t/125759649663160320/Ravenimg/2.png" onclick="handleLinkUrl(this); return false;">校园3840 × 2160/</a>          14-Feb-2023 00:53 -
+
+
 </pre>
     <hr>
     
@@ -135,19 +113,104 @@
         // 语言配置
         const translations = {
             zh: {
-                pageTitle: 'Raven enine 美术资产 索引',
+                pageTitle: 'Raven engine美术资产设计使用',
                 listHeader: '名称         最后修改时间     大小',
-                footerText: '资产仓库/ 服务器地址 mirrors.huaweicloud.com 端口 443'
+                footerText: '资产仓库/ 服务器地址 Raven.rs 端口 80',
+                downloading: '正在下载...',
+                downloadStarted: '下载已开始',
+                downloadFailed: '下载失败，正在新窗口打开...'
             },
             en: {
-                pageTitle: 'Index of openjdk-local',
+                pageTitle: 'Index of Raven Art Assets',
                 listHeader: 'Name         Last modified     Size',
-                footerText: 'ArtifactRepo/ Server at mirrors.huaweicloud.com Port 443'
+                footerText: 'ArtifactRepo/ Server at mirrors.huaweicloud.com Port 443',
+                downloading: 'Downloading...',
+                downloadStarted: 'Download started',
+                downloadFailed: 'Download failed, opening in new window...'
             }
         };
 
         // 当前语言
         let currentLang = 'zh';
+
+        // 显示状态消息
+        function showStatus(message, isError = false) {
+            const statusDiv = document.getElementById('download-status');
+            const messageSpan = document.getElementById('download-message');
+            
+            statusDiv.className = 'download-status' + (isError ? ' error' : '');
+            messageSpan.textContent = message;
+            statusDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // 获取文件名
+        function getFileName(url, linkText) {
+            if (url.includes('.png') || url.includes('.jpg') || url.includes('.jpeg')) {
+                return linkText + url.substring(url.lastIndexOf('.'));
+            } else if (linkText.endsWith('/')) {
+                return linkText.slice(0, -1) + '.zip';
+            } else {
+                return linkText + '.zip';
+            }
+        }
+
+        // 修改后的链接处理函数
+        async function handleLinkUrl(element) {
+            const url = element.getAttribute("href");
+            const linkText = element.textContent.trim();
+            const filename = getFileName(url, linkText);
+            
+            showStatus(translations[currentLang].downloading);
+            
+            try {
+                // 方法1: 尝试使用 fetch 下载
+                const response = await fetch(url, { 
+                    mode: 'no-cors',  // 避免 CORS 问题
+                    method: 'GET'
+                });
+                
+                // 创建下载链接
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.style.display = 'none';
+                
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                
+                showStatus(translations[currentLang].downloadStarted);
+                
+            } catch (error) {
+                // 方法2: 如果 fetch 失败，使用 iframe 方式
+                try {
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.style.position = 'absolute';
+                    iframe.style.left = '-9999px';
+                    iframe.src = url;
+                    
+                    document.body.appendChild(iframe);
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(iframe);
+                    }, 5000);
+                    
+                    showStatus(translations[currentLang].downloadStarted);
+                    
+                } catch (iframeError) {
+                    // 方法3: 最后的回退方案 - 在新窗口打开
+                    showStatus(translations[currentLang].downloadFailed, true);
+                    setTimeout(() => {
+                        window.open(url, '_blank');
+                    }, 1000);
+                }
+            }
+        }
 
         // 切换语言函数
         function switchLanguage(lang) {
@@ -165,12 +228,6 @@
             
             // 保存语言偏好到 localStorage
             localStorage.setItem('preferredLanguage', lang);
-        }
-
-        // 链接处理函数
-        function handleLinkUrl(element) {
-            var value = element.getAttribute("href");
-            element.setAttribute("href", encodeURI(value));
         }
 
         // 页面加载时恢复语言偏好
