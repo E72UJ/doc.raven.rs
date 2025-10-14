@@ -4,4 +4,4 @@ Raven engine 的GUI的设计目标是尽可能的简洁轻快，同时提供足�
 
 | 文件路径 | 描述 |
 |---------|------|
-| gui/textbox.png | 包含用于游戏主程序内的游戏文本框 |
+| gui/textbox.png | 包含用于游戏主程序内的游戏文本框文件 |
