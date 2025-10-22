@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -53,34 +54,13 @@
             font-size: small;
             color: #666;
         }
-        .download-status {
-            position: fixed;
-            top: 50px;
-            right: 20px;
-            padding: 10px 15px;
-            background-color: #d4edda;
-            border: 1px solid #c3e6cb;
-            border-radius: 5px;
-            display: none;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .download-status.error {
-            background-color: #f8d7da;
-            border-color: #f5c6cb;
-        }
     </style>
 </head>
 <body>
-    <!-- 下载状态提示 -->
-    <div id="download-status" class="download-status">
-        <span id="download-message">正在下载...</span>
-    </div>
-
     <!-- 语言切换按钮 -->
     <div class="language-switch">
-        <button id="btn-zh" class="active" onclick="switchLanguage('zh')">中文</button>
-        <button id="btn-en" onclick="switchLanguage('en')">English</button>
+        <button id="btn-zh" class="active">中文</button>
+        <button id="btn-en">English</button>
     </div>
 
     <!-- 页面标题 -->
@@ -95,155 +75,25 @@
     <!-- 文件列表 -->
      <h1>Background 背景</h1>
     <pre>
-<a href="https://d.feiliupan.com/t/125759649663160320/Ravenimg/1.png" onclick="handleLinkUrl(this); return false;">悲伤酒馆3840*2160</a>          22-Aug-2021 15:18 -
-<a href="https://d.feiliupan.com/t/125759649663160320/Ravenimg/2.png" onclick="handleLinkUrl(this); return false;">校园3840*2160/</a>          14-Feb-2023 00:53 -
+<a href="https://d.feiliupan.com/t/125759649663160320/Ravenimg/1.png">悲伤酒馆3840*2160</a>          22-Aug-2021 15:18 -
+<a href="https://d.feiliupan.com/t/125759649663160320/Ravenimg/2.png">校园3840*2160/</a>          14-Feb-2023 00:53 -
 
 </pre>
 
      <h1>Font 字体</h1>
     <pre>
-<a href="http://115.190.203.200/f/d/OxTl/GenSenMaruGothicTW-Bold.ttf" onclick="handleLinkUrl(this); return false;">GenSenMaruGothicTW-Bold.ttf</a>          22-Aug-2021 15:18 -       14-Feb-2023 00:53 -
+<a href="http://115.190.203.200/f/d/OxTl/GenSenMaruGothicTW-Bold.ttf">GenSenMaruGothicTW-Bold.ttf</a>          22-Aug-2021 15:18 -       14-Feb-2023 00:53 -
 </pre>
 
      <h1>Aduio 音频</h1>
     <pre>
-<a href="http://115.190.203.200/f/d/zKfZ/01.ogg" onclick="handleLinkUrl(this); return false;">悲伤天使.ogg</a>          22-Aug-2021 15:18 -       14-Feb-2023 00:53 -
+<a href="http://115.190.203.200/f/d/zKfZ/01.ogg">悲伤天使.ogg</a>          22-Aug-2021 15:18 -       14-Feb-2023 00:53 -
 </pre>
     <hr>
     
     <!-- 页脚 -->
     <address>
-        <span id="footer-text">资产仓库/ 服务器地址 mirrors.huaweicloud.com 端口 443</span>
+        <span id="footer-text">资产仓库/ 服务器地址 Raven.rs 端口 80</span>
     </address>
-
-    <script type="text/javascript">
-        // 语言配置
-        const translations = {
-            zh: {
-                pageTitle: 'Raven engine美术资产设计使用',
-                listHeader: '名称         最后修改时间     大小',
-                footerText: '资产仓库/ 服务器地址 Raven.rs 端口 80',
-                downloading: '正在下载...',
-                downloadStarted: '下载已开始',
-                downloadFailed: '下载失败，正在新窗口打开...'
-            },
-            en: {
-                pageTitle: 'Index of Raven Art Assets',
-                listHeader: 'Name         Last modified     Size',
-                footerText: 'ArtifactRepo/ Server at mirrors.huaweicloud.com Port 443',
-                downloading: 'Downloading...',
-                downloadStarted: 'Download started',
-                downloadFailed: 'Download failed, opening in new window...'
-            }
-        };
-
-        // 当前语言
-        let currentLang = 'zh';
-
-        // 显示状态消息
-        function showStatus(message, isError = false) {
-            const statusDiv = document.getElementById('download-status');
-            const messageSpan = document.getElementById('download-message');
-            
-            statusDiv.className = 'download-status' + (isError ? ' error' : '');
-            messageSpan.textContent = message;
-            statusDiv.style.display = 'block';
-            
-            setTimeout(() => {
-                statusDiv.style.display = 'none';
-            }, 3000);
-        }
-
-        // 获取文件名
-        function getFileName(url, linkText) {
-            if (url.includes('.png') || url.includes('.jpg') || url.includes('.jpeg')) {
-                return linkText + url.substring(url.lastIndexOf('.'));
-            } else if (linkText.endsWith('/')) {
-                return linkText.slice(0, -1) + '.zip';
-            } else {
-                return linkText + '.zip';
-            }
-        }
-
-        // 修改后的链接处理函数
-        async function handleLinkUrl(element) {
-            const url = element.getAttribute("href");
-            const linkText = element.textContent.trim();
-            const filename = getFileName(url, linkText);
-            
-            showStatus(translations[currentLang].downloading);
-            
-            try {
-                // 方法1: 尝试使用 fetch 下载
-                const response = await fetch(url, { 
-                    mode: 'no-cors',  // 避免 CORS 问题
-                    method: 'GET'
-                });
-                
-                // 创建下载链接
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = filename;
-                a.style.display = 'none';
-                
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                
-                showStatus(translations[currentLang].downloadStarted);
-                
-            } catch (error) {
-                // 方法2: 如果 fetch 失败，使用 iframe 方式
-                try {
-                    const iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.style.position = 'absolute';
-                    iframe.style.left = '-9999px';
-                    iframe.src = url;
-                    
-                    document.body.appendChild(iframe);
-                    
-                    setTimeout(() => {
-                        document.body.removeChild(iframe);
-                    }, 5000);
-                    
-                    showStatus(translations[currentLang].downloadStarted);
-                    
-                } catch (iframeError) {
-                    // 方法3: 最后的回退方案 - 在新窗口打开
-                    showStatus(translations[currentLang].downloadFailed, true);
-                    setTimeout(() => {
-                        window.open(url, '_blank');
-                    }, 1000);
-                }
-            }
-        }
-
-        // 切换语言函数
-        function switchLanguage(lang) {
-            currentLang = lang;
-            
-            // 更新页面内容
-            document.getElementById('page-title').textContent = translations[lang].pageTitle;
-            document.getElementById('list-header').textContent = translations[lang].listHeader;
-            document.getElementById('footer-text').textContent = translations[lang].footerText;
-            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-            
-            // 更新按钮状态
-            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            
-            // 保存语言偏好到 localStorage
-            localStorage.setItem('preferredLanguage', lang);
-        }
-
-        // 页面加载时恢复语言偏好
-        window.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferredLanguage');
-            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
-                switchLanguage(savedLang);
-            }
-        });
-    </script>
 </body>
 </html>
