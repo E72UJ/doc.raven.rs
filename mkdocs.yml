@@ -52,14 +52,11 @@ nav:
     - 最小系统和开发流程: run.md
     - 对话和旁白: dialogue.md
     - 场景和背景: background.md
-    - 显示图像: images.md
     - 游戏内菜单: menus.md
     - 跳转与交互: jump.md
     - 条件语句: conditionals.md
     - swf渲染: swf.md
     - 音频: audio.md
-    - 视频: movie.md
-    - 语音: voice.md
     - 样式系统: style.md
     - 音效: sfx.md
 

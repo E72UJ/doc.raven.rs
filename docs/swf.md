@@ -8,3 +8,16 @@ SWF 渲染功能是Raven引擎所特有的一种动画支持功能，因为这�
 
 ## 语法
 
+```yaml
+- character: "none"
+  text: "这是一个swf动画"
+  portrait: "none"
+  swf: "assets/swf/animation.swf"
+```
+
+地址也在main.yaml中配置。例如：
+
+```yaml
+swf:
+  animation: "assets/swf/animation.swf"
+```
