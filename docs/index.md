@@ -19,6 +19,7 @@ Raven 是一款基于 Rust 语言开发的现代化视觉小说/文字冒险游�
 
     详细的引擎使用请电邮 furau@qq.com 文档记录请访问 github.com/E72UJ/doc.raven.rs
 
+    本引擎正在试验阶段，如果想投入生产使用，请查看Godot和Renpy
 
 ## 引擎特性
 
