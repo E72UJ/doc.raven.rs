@@ -1,7 +1,9 @@
 site_name: Raven 引擎中文文档
 site_description: Raven视觉小说引擎官方中文文档，提供完整教程、API参考和示例代码
 site_author: Furau
-# site_url: https://raven-docs.example.com
+site_url: https://doc.raven.rs
+repo: fontawesome/brands/github
+repo_url: https://github.com/e72uj/raven
 theme:
   name: material
   features:
@@ -38,6 +40,7 @@ theme:
     code: Fira Code
   logo: https://imgs.freeimg.cn/s/68309e7895514.png
   favicon: https://imgs.freeimg.cn/s/68309e7895514.png
+
 
 # 导航结构
 nav:
@@ -161,6 +164,11 @@ extra_css:
 extra_javascript:
   - javascripts/custom.js
 
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/e72uj/raven
 # 自定义版权信息
-copyright: Copyright &copy; 2004-2025 Raven 引擎
+copyright: Copyright &copy; 2024-2025 Raven 引擎
 
